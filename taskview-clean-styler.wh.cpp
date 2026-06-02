@@ -2,7 +2,7 @@
 // @id              taskview-clean-styler
 // @name            Task View Clean Styler
 // @description     Restyles the native Windows Task View (rounded corners, cleaner backdrop) by editing its live XAML tree — no overlay, non-invasive
-// @version         4.3.0
+// @version         4.4.0
 // @author          mahtab-ali
 // @github          https://github.com/mahtab-ali/taskview-clean-styler
 // @include         explorer.exe
@@ -107,9 +107,10 @@ namespace xm   = winrt::Windows::UI::Xaml::Media;
 // Everything is mirrored to %TEMP%\taskview-styler.log so you can just open
 // that file in Notepad instead of hunting through Windhawk's log viewer.
 static std::wstring g_logPath;
+static bool         g_fileLogEnabled = false;  // only write the temp file when diagnostics are on
 
 static void FileLog(const wchar_t* line) {
-    if (g_logPath.empty()) return;
+    if (!g_fileLogEnabled || g_logPath.empty()) return;
     HANDLE h = CreateFileW(g_logPath.c_str(), FILE_APPEND_DATA,
                            FILE_SHARE_READ | FILE_SHARE_WRITE, nullptr,
                            OPEN_ALWAYS, FILE_ATTRIBUTE_NORMAL, nullptr);
@@ -192,6 +193,7 @@ static void LoadSettings() {
     g_settings.cornerRadius  = (double)Wh_GetIntSetting(L"cornerRadius");
     g_settings.removeBorders = Wh_GetIntSetting(L"removeBorders") != 0;
     g_settings.logTypes      = Wh_GetIntSetting(L"logElementTypes") != 0;
+    g_fileLogEnabled         = g_settings.logTypes;
 
     g_settings.haveBg = false;
     if (PCWSTR bg = Wh_GetStringSetting(L"background")) {
