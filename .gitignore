@@ -1,0 +1,12 @@
+# Build / editor noise
+*.obj
+*.o
+*.dll
+*.exe
+*.pdb
+.vs/
+.vscode/
+*.user
+
+# Mod diagnostics log
+taskview-styler.log
