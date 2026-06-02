@@ -1,8 +1,8 @@
 // ==WindhawkMod==
-// @id              taskview-clean-styler
-// @name            Task View Clean Styler
-// @description     Restyles the native Windows Task View (rounded corners, cleaner backdrop) by editing its live XAML tree — no overlay, non-invasive
-// @version         4.4.0
+// @id              task-desktop-view-styler
+// @name            Task View / Desktop View Styler
+// @description     Restyles the native Windows 11 Task View (Desktop View) — rounded corners, cleaner backdrop, transparent desktops bar — by editing its live XAML tree, no overlay, non-invasive
+// @version         4.5.0
 // @author          mahtab-ali
 // @github          https://github.com/mahtab-ali/taskview-clean-styler
 // @include         explorer.exe
@@ -11,7 +11,14 @@
 
 // ==WindhawkModReadme==
 /*
-# Task View Clean Styler
+# Task View / Desktop View Styler
+
+![Styled Task View preview](https://raw.githubusercontent.com/mahtab-ali/taskview-clean-styler/main/screenshot.png)
+
+Restyle the Windows 11 **Task View** (the **Desktop View** / virtual-desktops
+switcher you get with `Win+Tab`) to give the window cards and desktop
+thumbnails rounded corners, a cleaner backdrop, and an optional transparent
+desktops bar.
 
 Instead of drawing its own window, this mod **restyles the real Windows Task
 View in place**. It attaches to Explorer's live XAML visual tree through

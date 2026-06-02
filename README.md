@@ -1,6 +1,8 @@
-# Task View Clean Styler
+# Task View / Desktop View Styler
 
-A [Windhawk](https://windhawk.net/) mod that **restyles the native Windows 11 Task View in place** — rounded corners, matching hover/selection radius, and an optional transparent virtual‑desktops bar — without drawing its own UI or hooking input.
+A [Windhawk](https://windhawk.net/) mod that **restyles the native Windows 11 Task View (Desktop View) in place** — rounded corners, matching hover/selection radius, and an optional transparent virtual‑desktops bar — without drawing its own UI or hooking input.
+
+![Styled Task View preview](screenshot.png)
 
 It attaches to Explorer's live XAML visual tree via `InitializeXamlDiagnosticsEx` (the same non‑invasive mechanism used by the *Windows 11 Taskbar Styler*) and, as Task View's elements are created, sets `CornerRadius` / `Background` / `BorderThickness` on the elements you target. Nothing is written to disk and no windows are created; disabling the mod reverts everything on the next Task View open.
 
@@ -16,7 +18,7 @@ It attaches to Explorer's live XAML visual tree via `InitializeXamlDiagnosticsEx
 ## Install
 
 1. Install [Windhawk](https://windhawk.net/).
-2. Create a new mod and paste the contents of [`taskview-clean-styler.wh.cpp`](taskview-clean-styler.wh.cpp), or install it from the Windhawk marketplace once published.
+2. Create a new mod and paste the contents of [`task-desktop-view-styler.wh.cpp`](task-desktop-view-styler.wh.cpp), or install it from the Windhawk marketplace once published.
 3. Compile and enable.
 
 ## Tuning for your Windows build
