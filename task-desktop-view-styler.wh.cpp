@@ -2,7 +2,7 @@
 // @id              task-desktop-view-styler
 // @name            Task View / Desktop View Styler
 // @description     Restyles the native Windows 11 Task View (Desktop View) — rounded corners, cleaner backdrop, transparent desktops bar — by editing its live XAML tree, no overlay, non-invasive
-// @version         4.5.0
+// @version         4.5.1
 // @author          mahtab-ali
 // @github          https://github.com/mahtab-ali
 // @include         explorer.exe

@@ -1,0 +1,32 @@
+controlStyles:
+  # ── Window cards in Task View (the Win+Tab thumbnails) ───────────────
+  #    Round the card and its resting/hover/selection backplate together
+  #    so the corners never disagree, and flatten the border.
+  - target: SwitchItemListViewItem
+    styles:
+      - CornerRadius=8
+      - BorderThickness=0
+  - target: ListViewItemPresenter
+    styles:
+      - CornerRadius=8
+      - BorderThickness=0
+  - target: Border#ThumbnailBorderHighlight
+    styles:
+      - CornerRadius=8
+      - BorderThickness=0
+  - target: Border#BackgroundBorder
+    styles:
+      - CornerRadius=8
+      - BorderThickness=0
+
+  # ── Virtual-desktop thumbnails in the bottom bar ─────────────────────
+  - target: VirtualDesktopThumbnailButton
+    styles:
+      - CornerRadius=8
+      - BorderThickness=0
+
+  # ── Clear the bottom desktops-bar backplate so only the desktops show ─
+  - target: Border#VirtualDesktopBarBackground
+    styles:
+      - Background=Transparent
+      - BorderThickness=0
